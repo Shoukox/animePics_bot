@@ -7,7 +7,7 @@ namespace tg_animeBot
     {
         static void Main(string[] args)
         {
-            string token = "1328219094:AAFjFsz80--0N_hT1K1-FRXVpkQvyQdGAWA";
+            string token = "YOUR_TOKEN";
             while (true)
             {
                 BotInstance bot = new BotInstance(token);
