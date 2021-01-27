@@ -16,7 +16,6 @@ namespace tg_animeBot.Bot
         public static List<string[]> channels = new List<string[]>()
         {
             new string[]{"Anime", "-1001394641961", "@shoukko"},    //Пиши здесь id и username каналов, к которым будут отсылаться фотки.
-            new string[]{"Loli", "-1001394641961", "@shoukko"},
             new string[]{"Ecchi", "-1001394641961", "@shoukko"},
             new string[]{"Neko", "-1001394641961", "@shoukko"},
             new string[]{"Yuri", "-1001394641961", "@shoukko"},
@@ -24,12 +23,13 @@ namespace tg_animeBot.Bot
             new string[]{"Uncensored", "-1001394641961", "@shoukko"},
             new string[]{"Wallpaper", "-1001394641961", "@shoukko"},
         };
-        public static Dictionary<string, string> commands = new Dictionary<string, string>() { { "Anime", "rating:s" }, { "Loli", "loli" }, { "Ecchi", "rating:q" },
+        public static Dictionary<string, string> commands = new Dictionary<string, string>() { { "Anime", "rating:s" }, { "Ecchi", "rating:q" },
                                                             { "Yuri", "yuri" }, { "Hentai","rating:e" }, {"Neko", "cat_ears"}, {"Uncensored", "uncensored"}, { "Wallpaper", "wallpaper"} };
 
         public BotInstance(string token)
         {
             bot = new TelegramBotClient(token);
+            bot.GetUpdatesAsync(-1);
             bot.StartReceiving();
             onEvents();
         }

@@ -12,10 +12,11 @@ namespace tg_animeBot.Bot.Logs
         private static void LogDate()
         {
             ChangeConsoleColor(ConsoleColor.Cyan);
-            Console.Write($"{DateTime.Now} ");
+            Console.Write($"[{DateTime.Now}] ");
         }
         public static void LogText(string text)
         {
+            LogDate();
             ChangeConsoleColor(ConsoleColor.White);
             Console.WriteLine(text);
         }
